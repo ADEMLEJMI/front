@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const CreateOrder = createAsyncThunk("Post Oders", async (data,{rejectWithValue}) => {
  try{
- const res = await axios.post("http://localhost:8081/api/user/createorder",data,{
+ const res = await axios.post("/user/createorder",data,{
     headers:{
         token:localStorage.getItem("token")
     }
